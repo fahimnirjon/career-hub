@@ -17,7 +17,7 @@ const AppliedJobs = () => {
             for(const id of storedJobIds){
                 const job = jobs.find(job=> job.id == id);
                 if(job){
-                    jobsApplied.push(id)
+                    jobsApplied.push(job)
                 }
             }
 
@@ -30,6 +30,19 @@ const AppliedJobs = () => {
     return (
         <div>
             <p>Jobs i applied:{appliedJobs.length} </p>
+            <div className="dropdown dropdown-end">
+            <div tabIndex={0} role="button" className="btn m-1">Click</div>
+            <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+            <li><a>All</a></li>
+            <li><a>Remote</a></li>
+            <li><a>On Site</a></li>
+            </ul>
+            </div>
+            <ul>
+                {
+                    appliedJobs.map(job=> <li key={job.id}><span>{job.job_title}{job.company_name}:{job.remote_or_onsite}</span></li> )
+                }
+            </ul>
         </div>
     );
 };

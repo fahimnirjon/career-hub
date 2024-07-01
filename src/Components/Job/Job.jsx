@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Job = ({job}) => {
     const {id, logo, job_title, company_name, remote_or_onsite, location, job_type, salary} = job;
     return (
-        <div>
+        <div className=''>
             <div className="card card-compact bg-base-200  shadow-xl">
   <figure>
     <img className='mt-4'
@@ -35,5 +35,8 @@ const Job = ({job}) => {
     );
 };
 
+Job.propTypes ={
+  job: PropTypes.object
+}
 
 export default Job;
