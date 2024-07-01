@@ -25,7 +25,7 @@ const AppliedJobs = () => {
 
             // console.log(jobs,storedJobIds, jobsApplied);
         }
-    },[])
+    },[jobs])
 
     return (
         <div>
