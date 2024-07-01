@@ -49,10 +49,9 @@ const AppliedJobs = () => {
 
     return (
         <div>
-            <p>Jobs i applied:{appliedJobs.length} </p>
-            <div className="dropdown dropdown-end">
-            <div tabIndex={0} role="button" className="btn m-1">Click</div>
-            <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+            <div className="mx-auto dropdown dropdown-end">
+            <div tabIndex={0} role="button" className="btn m-1">Options</div>
+            <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] p-2 shadow">
             <li onClick={()=> jobFilter('all')}><a>All</a></li>
             <li onClick={()=> jobFilter('remote')}><a>Remote</a></li>
             <li onClick={()=> jobFilter('onsite')}><a>On Site</a></li>
