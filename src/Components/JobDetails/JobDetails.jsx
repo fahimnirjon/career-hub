@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import { CiBadgeDollar } from "react-icons/ci";
 import { IoBagAddOutline } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -59,7 +59,9 @@ const JobDetails = () => {
                         </div>
                     </div>
                 </div>
+                <Link to="/applied">
                 <button onClick={handleApplyJobs} className="btn p-5 rounded-xl mb-5 btn-primary bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500">Apply Now</button>
+                </Link>
             </div>
             <ToastContainer />
         </div>
